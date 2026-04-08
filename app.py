@@ -15,7 +15,7 @@ def load_data():
     data = pd.read_csv(
         "https://raw.githubusercontent.com/jbrownlee/Datasets/master/airline-passengers.csv"
     )
-    data["Month"] = pd.to_datetime(data["Month"])
+    df["Month"] = df["Month"].dt.strftime("%Y-%m")
     return data
 
 df = load_data()
